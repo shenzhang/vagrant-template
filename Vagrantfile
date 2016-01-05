@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       node_config.vm.box = "ubuntu/trusty64"
   
       node_config.vm.provision "ansible" do |ansible|
-        ansible.playbook = "provision/vagrant.yml"
+        ansible.playbook = "provision/ansible-playbook.yml"
         # ansible.limit = 'all'
         ansible.extra_vars = {
           id: "#{n}"
